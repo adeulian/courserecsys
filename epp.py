@@ -4,6 +4,14 @@ import pandas as pd
 import numpy as np
 from datetime import datetime
 
+
+# Page configuration
+st.set_page_config(
+    page_title="Course Recommendation System",
+    page_icon="🎓",
+    layout="wide"
+)
+
 # HIDE UI ELEMENTS (Fork, 3-dots, Streamlit footer, Help button)
 hide_streamlit_style = """
     <style>
@@ -15,12 +23,6 @@ hide_streamlit_style = """
 """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
-# Page configuration
-st.set_page_config(
-    page_title="Course Recommendation System",
-    page_icon="🎓",
-    layout="wide"
-)
 
 # Initialize database
 def init_database():
