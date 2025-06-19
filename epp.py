@@ -4,6 +4,17 @@ import pandas as pd
 import numpy as np
 from datetime import datetime
 
+# HIDE UI ELEMENTS (Fork, 3-dots, Streamlit footer, Help button)
+hide_streamlit_style = """
+    <style>
+    [data-testid="stToolbar"] { visibility: hidden; height: 0; position: fixed; }
+    .stActionButtonIcon { display: none; }
+    footer { visibility: hidden; }
+    #MainMenu { visibility: hidden; }
+    </style>
+"""
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
 # Page configuration
 st.set_page_config(
     page_title="Course Recommendation System",
